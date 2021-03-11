@@ -26,6 +26,16 @@ const routes = [
         name: "addTraining",
         component: () => import("./../views/AddTraining.vue"),
     },
+    {
+        path: "/evaluasi-pelatihan",
+        name: "evaluasiPelatihan",
+        component: () => import("./../views/EvaluasiPelatihan.vue"),
+    },
+    {
+        path: "/pelaksanaan-pelatihan",
+        name: "pelaksanaanPelatihan",
+        component: () => import("./../views/PelaksanaanPelatihan.vue"),
+    },
 ]
 
 const router = createRouter({
