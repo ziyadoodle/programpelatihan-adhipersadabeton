@@ -58,7 +58,7 @@
                     <ul>
                         <li class="relative px-6 py-3">
                             <router-link
-                                to="/about"
+                                to="/vendor"
                                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                             >
                                 <svg
@@ -92,9 +92,9 @@
                             </router-link>
                         </li>
                         <li class="relative px-6 py-3">
-                            <a
+                            <router-link
+                                to="/training"
                                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                                href="./../training/index.html"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@
                                     ></line>
                                 </svg>
                                 <span class="ml-4">Training</span>
-                            </a>
+                            </router-link>
                         </li>
                         <li class="relative px-6 py-3">
                             <a
@@ -464,5 +464,9 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #666;
+}
+
+.h-screen {
+    background: url("./assets/double-bubble-outline.png");
 }
 </style>
