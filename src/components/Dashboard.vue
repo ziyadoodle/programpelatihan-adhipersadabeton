@@ -12,11 +12,11 @@
             <div class="flex flex-wrap gap-3 mb-5">
                 <input
                     type="date"
-                    class="flex items-center justify-between w-45 px-4 py-3 bg-white rounded-lg shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
+                    class="flex items-center justify-between w-45 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
                 />
                 <input
                     type="date"
-                    class="flex items-center justify-between w-45 px-4 py-3 bg-white rounded-lg shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
+                    class="flex items-center justify-between w-45 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
                 />
                 <div class="flex items-center justify-between">
                     <button
@@ -114,7 +114,7 @@
             <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-6">
                 <!-- Card -->
                 <div
-                    class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-green-700 bg-green-400 col-span-2"
+                    class="flex items-center p-4 rounded-lg shadow-xs dark:bg-green-700 bg-green-400 col-span-2"
                 >
                     <div>
                         <p
@@ -126,12 +126,12 @@
                         <p
                             class="text-xl font-semibold text-green-800 dark:text-white"
                         >
-                            Rp. 120,000,000
+                            Rp. 000,000,000
                         </p>
                     </div>
                 </div>
                 <div
-                    class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-indigo-700 bg-indigo-500 col-span-2"
+                    class="flex items-center p-4 rounded-lg shadow-xs dark:bg-indigo-700 bg-indigo-500 col-span-2"
                 >
                     <div>
                         <p
@@ -143,12 +143,12 @@
                         <p
                             class="text-xl font-semibold text-indigo-900 dark:text-white"
                         >
-                            Rp. 128,123,124
+                            Rp. 000,000,000
                         </p>
                     </div>
                 </div>
                 <div
-                    class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-blue-700 bg-blue-500 col-span-2"
+                    class="flex items-center p-4 rounded-lg shadow-xs dark:bg-blue-700 bg-blue-500 col-span-2"
                 >
                     <div>
                         <p
@@ -160,7 +160,7 @@
                         <p
                             class="text-xl font-semibold text-blue-900 dark:text-white"
                         >
-                            Rp. 120,000,000
+                            Rp. 000,000,000
                         </p>
                     </div>
                 </div>
