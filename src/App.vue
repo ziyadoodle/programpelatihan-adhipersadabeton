@@ -127,9 +127,9 @@
                             </router-link>
                         </li>
                         <li class="relative px-6 py-3">
-                            <a
+                            <router-link
+                                to="/evaluasi-pelatihan"
                                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                                href="./../EvaluasiPelatihan/index.html"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -159,12 +159,12 @@
                                     ></line>
                                 </svg>
                                 <span class="ml-4">Evaluasi Pelatihan</span>
-                            </a>
+                            </router-link>
                         </li>
                         <li class="relative px-6 py-3">
-                            <a
+                            <router-link
+                                to="/pelaksanaan-pelatihan"
                                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                                href="./../PelaksanaanPelatihan/index.html"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +194,7 @@
                                     ></line>
                                 </svg>
                                 <span class="ml-4">Pelaksanaan Pelatihan</span>
-                            </a>
+                            </router-link>
                         </li>
                     </ul>
                 </div>
