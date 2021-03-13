@@ -14,27 +14,39 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ "./../views/Vendor.vue"),
+            import(/* webpackChunkName: "vendor" */ "./../views/Vendor.vue"),
     },
     {
         path: "/training",
         name: "Training",
-        component: () => import("./../views/Training.vue"),
+        component: () =>
+            import(
+                /* webpackChunkName: "training" */ "./../views/Training.vue"
+            ),
     },
     {
         path: "/add-training",
         name: "addTraining",
-        component: () => import("./../views/AddTraining.vue"),
+        component: () =>
+            import(
+                /* webpackChunkName: "addTraining" */ "./../views/AddTraining.vue"
+            ),
     },
     {
         path: "/evaluasi-pelatihan",
         name: "evaluasiPelatihan",
-        component: () => import("./../views/EvaluasiPelatihan.vue"),
+        component: () =>
+            import(
+                /* webpackChunkName: "evaluasi" */ "./../views/EvaluasiPelatihan.vue"
+            ),
     },
     {
         path: "/pelaksanaan-pelatihan",
         name: "pelaksanaanPelatihan",
-        component: () => import("./../views/PelaksanaanPelatihan.vue"),
+        component: () =>
+            import(
+                /* webpackChunkName: "pelaksanaan" */ "./../views/PelaksanaanPelatihan.vue"
+            ),
     },
 ]
 
