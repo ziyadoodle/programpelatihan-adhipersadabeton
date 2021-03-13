@@ -1,7 +1,6 @@
 <template>
     <div id="nav">
-        <!-- <router-link to="/">Dashboard</router-link> |
-        <router-link to="/about">About</router-link> -->
+        <app-spinner></app-spinner>
         <div class="flex h-screen bg-gray-50 dark:bg-gray-900">
             <aside
                 class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0 animate__animated animate__fadeInLeft animate__slow"
@@ -446,7 +445,25 @@
     </div>
 </template>
 
+<script>
+import spinner from "@/components/spinner.vue"
+
+export default {
+    components: {
+        "app-spinner": spinner,
+    },
+}
+</script>
+
 <style>
+aside {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 6px;
