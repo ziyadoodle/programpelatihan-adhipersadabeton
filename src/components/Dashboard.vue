@@ -12,11 +12,11 @@
             <div class="flex flex-wrap gap-3 mb-5">
                 <input
                     type="date"
-                    class="flex items-center justify-between w-45 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
+                    class="flex items-center justify-between w-28 md:w-44 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
                 />
                 <input
                     type="date"
-                    class="flex items-center justify-between w-45 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
+                    class="flex items-center justify-between w-28 md:w-44 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
                 />
                 <div class="flex items-center justify-between">
                     <button
