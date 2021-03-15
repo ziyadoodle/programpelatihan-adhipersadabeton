@@ -19,7 +19,7 @@
                         Pilih <span class="text-red-600">Vendor</span>
                     </span>
                     <select
-                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     >
                         <option>Pilih Vendor</option>
                         <option>PT Trainer Indonesia</option>
@@ -34,7 +34,7 @@
                         >Nama <span class="text-red-600">Pelatihan</span></span
                     >
                     <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     />
                 </label>
 
@@ -44,14 +44,14 @@
                         class="text-gray-700 dark:text-gray-400 text-base font-medium"
                         >Tgl <span class="text-red-600">Pelaksanaan</span></span
                     >
-                    <div class="block">
+                    <div class="block space-x-4">
                         <input
                             type="date"
-                            class="w-1/3 mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            class="w-1/3 p-2 bg-gray-100 mt-1 text-sm focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                         />
                         <input
                             type="date"
-                            class="w-1/3 mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            class="w-1/3 p-2 bg-gray-100 mt-1 text-sm focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                         />
                     </div>
                 </label>
@@ -64,7 +64,7 @@
                         <span class="text-red-600">Pelaksanaan</span></span
                     >
                     <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     />
                 </label>
 
@@ -77,7 +77,7 @@
                         Sertifikat</span
                     >
                     <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     />
                 </label>
 
@@ -89,7 +89,7 @@
                         <span class="text-red-600">Pelaksanaan</span></span
                     >
                     <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     />
                 </label>
 
@@ -101,7 +101,7 @@
                         Gap <span class="text-red-600">Kompetensi</span>
                     </span>
                     <select
-                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm form-select focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     >
                         <option>Soft Skill</option>
                         <option>Hard SKill</option>
@@ -116,7 +116,7 @@
                         Kategori <span class="text-red-600">Hard</span> Skill
                     </span>
                     <select
-                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm form-select focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     >
                         <option>General Skill</option>
                         <option>Technical Skill</option>
@@ -132,7 +132,7 @@
                         <span class="text-red-600">Technical</span> Skill
                     </span>
                     <select
-                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm form-select focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     >
                         <option>Teknik</option>
                         <option>Non-Teknik</option>
@@ -147,7 +147,7 @@
                         Jenis <span class="text-red-600">Pengembangan</span>
                     </span>
                     <select
-                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray"
+                        class="block w-3/5 p-2 bg-gray-100 mt-1 text-sm form-select focus:ring-2 focus:ring-red-400 focus:outline-none focus:shadow-outline-red"
                     >
                         <option>Pelatihan</option>
                         <option>Kursus</option>
