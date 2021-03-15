@@ -827,6 +827,7 @@ module.exports = {
         extend: {
             opacity: ["disabled"],
             cursor: ["disabled"],
+            maxHeight: ["focus"],
         },
         fill: ["responsive"],
         flex: ["responsive"],
