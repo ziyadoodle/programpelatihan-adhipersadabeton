@@ -23,13 +23,13 @@
                 </div>
 
                 <!-- search bar & btn -->
-                <div class="col-start-4">
+                <div class="col-start-2 md:col-start-4">
                     <label class="block text-sm">
                         <div
                             class="relative text-gray-500 focus-within:text-red-600"
                         >
                             <input
-                                class="block w-full pr-20 p-2 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray form-input"
+                                class="block w-full pr-20 px-4 py-2 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray form-input"
                                 placeholder="Cari Vendor"
                             />
                             <button
