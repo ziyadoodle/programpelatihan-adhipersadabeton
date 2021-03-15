@@ -1,5 +1,5 @@
 <template>
-    <div class="spin">
+    <div class="spin" v-if="start">
         <div class="ring">
             <div class="lds-ripple">
                 <div></div>
@@ -9,10 +9,16 @@
     </div>
 </template>
 
+<script>
+export default {
+    props: ["start"],
+}
+</script>
+
 <style>
 .spin {
     /* z-index: -10; */
-    z-index: 9999;
+    /* z-index: 9999; */
     @apply w-full;
     @apply h-full;
     /* @apply bg-white; */
