@@ -12,11 +12,11 @@
             <div class="flex flex-wrap gap-3 mb-5">
                 <input
                     type="date"
-                    class="flex items-center justify-between w-45 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
+                    class="flex items-center justify-between w-28 md:w-44 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
                 />
                 <input
                     type="date"
-                    class="flex items-center justify-between w-45 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
+                    class="flex items-center justify-between w-28 md:w-44 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-red"
                 />
                 <div class="flex items-center justify-between">
                     <button
@@ -285,29 +285,7 @@
                                 </td>
 
                                 <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
+                                    <span></span>
                                 </td>
 
                                 <td class="px-4 py-3 text-sm text-center">
@@ -328,29 +306,7 @@
                                 </td>
 
                                 <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
+                                    <span></span>
                                 </td>
                                 <!-- total score -->
                                 <td class="px-4 py-3 text-sm text-center"></td>
