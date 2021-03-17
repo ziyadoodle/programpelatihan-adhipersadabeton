@@ -185,6 +185,7 @@ module.exports = {
         },
         fontFamily: {
             sans: [
+                "Montserrat",
                 "ui-sans-serif",
                 "system-ui",
                 "-apple-system",
@@ -201,6 +202,7 @@ module.exports = {
                 '"Noto Color Emoji"',
             ],
             serif: [
+                "Montserrat",
                 "ui-serif",
                 "Georgia",
                 "Cambria",
