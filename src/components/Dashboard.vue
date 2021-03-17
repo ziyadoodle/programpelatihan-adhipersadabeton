@@ -249,12 +249,10 @@
                                     Bagian Test
                                 </td>
                                 <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
+                                <td
+                                    class="px-4 py-3 text-sm text-center font-semibold text-red-500"
+                                >
+                                    Staff Test
                                 </td>
                                 <!-- penugasan saat ini -->
                                 <td class="px-4 py-3 text-sm text-center">
