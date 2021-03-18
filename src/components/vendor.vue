@@ -86,68 +86,53 @@
                         <tbody
                             class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
                         >
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                1
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama vendor -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia
+                            <tr
+                                v-for="vendor in vendors"
+                                :key="vendor.no"
+                                class="text-gray-700 dark:text-gray-400"
+                            >
+                                <td :class="dataclass">
+                                    <span class="font-semibold">
+                                        {{ vendor.no }}
                                     </span>
                                 </td>
-                                <!-- pic -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        Rogers Dwiputra
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-purple-500">
+                                        {{ vendor.nama }}
                                     </span>
                                 </td>
-                                <!-- kontak pic -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    082240206862
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-orange-500">
+                                        {{ vendor.pic }}
+                                    </span>
                                 </td>
-                                <!-- telp perusahaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    021-1234567
+                                <td :class="dataclass">
+                                    {{ vendor.kontak }}
                                 </td>
-                                <!-- website -->
-                                <td class="px-4 py-3 text-sm text-center">
+                                <td :class="dataclass">
+                                    {{ vendor.telp }}
+                                </td>
+                                <td :class="dataclass">
                                     <span
-                                        class="px-2 py-1 font-semibold text-blue-500 hover:text-blue-700"
+                                        class="font-semibold text-blue-500 hover:text-blue-700"
                                     >
-                                        <a href="https://basicteknologi.co.id">
-                                            https://basicteknologi.co.id
+                                        <a :href="vendor.website">
+                                            {{ vendor.website }}
                                         </a>
                                     </span>
                                 </td>
-                                <!-- brosur -->
                                 <td class="px-4 py-3 text-sm text-center">
-                                    <button
-                                        class="flex items-center justify-between px-2 py-2 ml-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-full active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
+                                    <a
+                                        target="_blank"
+                                        :href="vendor.brosur"
+                                        class="flex justify-center py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-full active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
                                         aria-label="Edit"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-white"
+                                            class="w-5 h-5 text-white stroke-2 stroke-current"
                                             viewBox="0 0 24 24"
                                             fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
                                             stroke-linecap="round"
                                             stroke-linejoin="round"
                                         >
@@ -155,107 +140,8 @@
                                                 d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
                                             />
                                         </svg>
-                                    </button>
+                                    </a>
                                 </td>
-                                <!-- aksi -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <button
-                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-full active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
-                                        aria-label="Edit"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-white"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <path
-                                                d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"
-                                            ></path>
-                                            <polygon
-                                                points="18 2 22 6 12 16 8 16 8 12 18 2"
-                                            ></polygon>
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                2
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama vendor -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-                                <!-- pic -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        Rogers Dwiputra 2
-                                    </span>
-                                </td>
-                                <!-- kontak pic -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    0822402068622
-                                </td>
-                                <!-- telp perusahaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    021-12345672
-                                </td>
-                                <!-- website -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500 hover:text-blue-700"
-                                    >
-                                        <a href="https://basicteknologi.co.id">
-                                            https://basicteknologi.co.id
-                                        </a>
-                                    </span>
-                                </td>
-                                <!-- brosur -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <button
-                                        class="flex items-center justify-between px-2 py-2 ml-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-full active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
-                                        aria-label="Edit"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-white"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <path
-                                                d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
-                                            />
-                                        </svg>
-                                    </button>
-                                </td>
-                                <!-- aksi -->
                                 <td class="px-4 py-3 text-sm text-center">
                                     <button
                                         class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-full active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
@@ -386,3 +272,45 @@
         </div>
     </main>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            dataclass: "px-4 py-3 text-sm text-center",
+            vendors: [
+                {
+                    no: "1",
+                    nama: "PT Trainer Indonesia",
+                    pic: "dudel",
+                    kontak: "+62 821-6666-0000",
+                    telp: "021-1234567",
+                    website: "https://trainer.co.id",
+                    brosur:
+                        "https://cdn.discordapp.com/attachments/647338577147199488/819404476770156554/763424111417622538.png",
+                },
+                {
+                    no: "2",
+                    nama: "PT Trainer Indonesia 2",
+                    pic: "dudel 2",
+                    kontak: "+62 821-6666-0000",
+                    telp: "021-1234567",
+                    website: "https://trainer2.co.id",
+                    brosur:
+                        "https://cdn.discordapp.com/attachments/647338577147199488/819404476770156554/763424111417622538.png",
+                },
+                {
+                    no: "3",
+                    nama: "PT Trainer Indonesia 3",
+                    pic: "dudel 3",
+                    kontak: "+62 821-6666-0000",
+                    telp: "021-1234567",
+                    website: "https://trainer3.co.id",
+                    brosur:
+                        "https://cdn.discordapp.com/attachments/647338577147199488/819404476770156554/763424111417622538.png",
+                },
+            ],
+        }
+    },
+}
+</script>
