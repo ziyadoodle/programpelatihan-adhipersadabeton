@@ -221,86 +221,70 @@
                         <tbody
                             class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
                         >
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                1
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td
-                                    class="px-4 py-3 text-sm text-center font-semibold text-red-500"
-                                >
-                                    Staff Test
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
+                            <tr
+                                v-for="pel in pelatihan"
+                                :key="pel.no"
+                                class="text-gray-700 dark:text-gray-400"
+                            >
+                                <td :class="dataclass">
                                     <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
+                                        class="font-semibold w-full h-full text-center"
                                     >
-                                        14/10/2020
+                                        {{ pel.no }}
                                     </span>
                                 </td>
-                                <!-- lokasi pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    testing nama pelatihan 1
+                                <td :class="dataclass">
+                                    {{ pel.nama }}
                                 </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
+                                <td :class="dataclass">
+                                    {{ pel.npp }}
+                                </td>
+                                <td :class="dataclass">
+                                    {{ pel.unit }}
+                                </td>
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-red-500">
+                                        {{ pel.jabatan }}
                                     </span>
                                 </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                    >
-                                        true
-                                    </span>
-                                    <span
-                                        class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                    >
-                                        false
+                                <td :class="dataclass">
+                                    {{ pel.penugasan }}
+                                </td>
+                                <td :class="dataclass">
+                                    {{ pel.bidang }}
+                                </td>
+                                <td :class="dataclass">
+                                    {{ pel.namapelatihan }}
+                                </td>
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-orange-500">
+                                        {{ pel.waktu }}
                                     </span>
                                 </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
+                                <td :class="dataclass">
+                                    {{ pel.lokasi }}
+                                </td>
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-blue-500">
+                                        {{ pel.biaya }}
+                                    </span>
+                                </td>
+                                <td :class="dataclass">
+                                    <span
+                                        :class="{
+                                            true: pel.isTrue,
+                                            false: !pel.isTrue,
+                                        }"
+                                    >
+                                        {{ pel.status }}
+                                    </span>
+                                </td>
+                                <td :class="dataclass">
+                                    {{ pel.score }}
+                                </td>
+                                <td :class="dataclass">
+                                    {{ pel.keterangan }}
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -407,3 +391,71 @@
         </div>
     </main>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            dataclass: "px-4 py-3 text-sm text-center",
+            pelatihan: [
+                {
+                    no: "1",
+                    nama: "Applestore Tester",
+                    npp: "applestore",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Bidang Test",
+                    namapelatihan: "Testing nama pelatihan 1",
+                    waktu: "14/10/2020",
+                    lokasi: "Lokasi Test",
+                    biaya: "5.000.000",
+                    status: "true",
+                    score: "n/a",
+                    keterangan: "n/a",
+                    isTrue: true,
+                },
+                {
+                    no: "2",
+                    nama: "Androidstore Tester",
+                    npp: "androidstore",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Bidang Test",
+                    namapelatihan: "Testing nama pelatihan 2",
+                    waktu: "14/10/2020",
+                    lokasi: "Lokasi Test",
+                    biaya: "5.000.000",
+                    status: "false",
+                    score: "n/a",
+                    keterangan: "n/a",
+                    isTrue: false,
+                },
+            ],
+        }
+    },
+}
+</script>
+
+<style scoped>
+td > span.true {
+    @apply px-2;
+    @apply py-1;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply text-green-700;
+    @apply bg-green-100;
+    @apply rounded-full;
+}
+
+td > span.false {
+    @apply px-2;
+    @apply py-1;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply text-red-700;
+    @apply bg-red-100;
+    @apply rounded-full;
+}
+</style>
