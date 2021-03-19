@@ -81,129 +81,46 @@
                         <tbody
                             class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
                         >
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                1
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- tanggal -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    14 October 2020
-                                </td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-                                <!-- vendor -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 1
+                            <tr
+                                v-for="training in trainings"
+                                :key="training.no"
+                                class="text-gray-700 dark:text-gray-400"
+                            >
+                                <td :class="dataclass">
+                                    <span class="font-semibold">
+                                        {{ training.no }}
                                     </span>
                                 </td>
-                                <!-- Lokasi Pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
+                                <td :class="dataclass">
+                                    {{ training.tanggal }}
                                 </td>
-                                <!-- jumlah peserta -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    0
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-yellow-500">
+                                        {{ training.nama }}
+                                    </span>
                                 </td>
-                                <!-- status -->
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-purple-500">
+                                        {{ training.vendor }}
+                                    </span>
+                                </td>
+                                <td :class="dataclass">
+                                    {{ training.lokasi }}
+                                </td>
+                                <td :class="dataclass">
+                                    {{ training.peserta }}
+                                </td>
                                 <td class="px-4 py-3 text-xs text-center">
                                     <span
-                                        class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
+                                        :class="{
+                                            true: training.isRealisasi,
+                                            false: !training.isRealisasi,
+                                        }"
                                     >
-                                        Realisasi
+                                        {{ training.status }}
                                     </span>
                                 </td>
-                                <!-- aksi -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <button
-                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-full active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
-                                        aria-label="Edit"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-white"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <path
-                                                d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"
-                                            ></path>
-                                            <polygon
-                                                points="18 2 22 6 12 16 8 16 8 12 18 2"
-                                            ></polygon>
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                2
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- tanggal -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    14 October 2020
-                                </td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 2
-                                </td>
-                                <!-- vendor -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-                                <!-- Lokasi Pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 2
-                                </td>
-                                <!-- jumlah peserta -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    0
-                                </td>
-                                <!-- status -->
-                                <td class="px-4 py-3 text-xs text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold leading-tight text-blue-700 bg-blue-100 rounded-full dark:bg-blue-700 dark:text-blue-100"
-                                    >
-                                        Rencana
-                                    </span>
-                                </td>
-                                <!-- aksi -->
-                                <td class="px-4 py-3 text-sm text-center">
+                                <td :class="dataclass">
                                     <button
                                         class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-full active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
                                         aria-label="Edit"
@@ -333,3 +250,57 @@
         </div>
     </main>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            dataclass: "px-4 py-3 text-sm text-center",
+            trainings: [
+                {
+                    no: "1",
+                    tanggal: "01 Jan 2020",
+                    nama: "Testing Nama Pelatihan 1",
+                    vendor: "PT Trainer Indonesia 1",
+                    lokasi: "Testing Lokasi 1",
+                    peserta: "100",
+                    status: "Realisasi",
+                    isRealisasi: true,
+                },
+                {
+                    no: "2",
+                    tanggal: "02 Feb 2020",
+                    nama: "Testing Nama Pelatihan 2",
+                    vendor: "PT Trainer Indonesia 2",
+                    lokasi: "Testing Lokasi 2",
+                    peserta: "50",
+                    status: "Rencana",
+                    isRealisasi: false,
+                },
+            ],
+        }
+    },
+}
+</script>
+
+<style scoped>
+.true {
+    @apply px-2;
+    @apply py-1;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply text-green-700;
+    @apply bg-green-100;
+    @apply rounded-full;
+}
+
+.false {
+    @apply px-2;
+    @apply py-1;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply text-blue-700;
+    @apply bg-blue-100;
+    @apply rounded-full;
+}
+</style>
