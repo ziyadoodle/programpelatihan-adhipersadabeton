@@ -205,76 +205,58 @@
                         <tbody
                             class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
                         >
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                1
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
+                            <tr
+                                v-for="pel in pelatihan"
+                                :key="pel.no"
+                                class="text-gray-700 dark:text-gray-400"
+                            >
+                                <td :class="dataclass">
+                                    <span class="font-semibold">
+                                        {{ pel.no }}
                                     </span>
                                 </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
+                                <td :class="dataclass">
+                                    {{ pel.nama }}
                                 </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
+                                <td :class="dataclass">
+                                    {{ pel.npp }}
                                 </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
+                                <td :class="dataclass">
+                                    {{ pel.unit }}
+                                </td>
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-red-500">
+                                        {{ pel.jabatan }}
                                     </span>
                                 </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
+                                <td :class="dataclass">
+                                    {{ pel.penugasan }}
+                                </td>
+                                <td :class="dataclass">
+                                    {{ pel.bidang }}
+                                </td>
+                                <td :class="dataclass">
+                                    {{ pel.namapelatihan }}
+                                </td>
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-orange-500">
+                                        {{ pel.waktu }}
                                     </span>
                                 </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-blue-500">
+                                        {{ pel.biaya }}
+                                    </span>
+                                </td>
+                                <td :class="dataclass">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
+                                        :class="{
+                                            atasanya: pel.isAtasan,
+                                            atasantolak: !pel.isAtasan,
+                                        }"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                     >
@@ -283,140 +265,15 @@
                                         ></polyline>
                                     </svg>
                                 </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span></span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
+                                <td :class="dataclass">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
+                                        :class="{
+                                            atasantolak: pel.isAtasan,
+                                            atasantidak: !pel.isAtasan,
+                                        }"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span></span>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 1
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                2
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 2
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 2
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                     >
@@ -434,15 +291,15 @@
                                         ></line>
                                     </svg>
                                 </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
+                                <td :class="dataclass">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
+                                        :class="{
+                                            sdmya: pel.isSdm,
+                                            sdmtolak: !pel.isSdm,
+                                        }"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                     >
@@ -451,15 +308,15 @@
                                         ></polyline>
                                     </svg>
                                 </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
+                                <td :class="dataclass">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
+                                        :class="{
+                                            sdmtolak: pel.isSdm,
+                                            sdmtidak: !pel.isSdm,
+                                        }"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                     >
@@ -477,1370 +334,30 @@
                                         ></line>
                                     </svg>
                                 </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
+                                <td :class="dataclass">
+                                    {{ pel.waktu }}
+                                </td>
+                                <td :class="dataclass">
+                                    <span class="font-semibold text-purple-500">
+                                        {{ pel.vendor }}
                                     </span>
                                 </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
+                                <td :class="dataclass">
+                                    {{ pel.lokasi }}
                                 </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
+                                <td :class="dataclass">
+                                    {{ pel.biayaFinal }}
                                 </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                3
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 3
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 3
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
+                                <td :class="dataclass">
                                     <span
-                                        class="px-2 py-1 font-semibold text-red-500"
+                                        :class="{
+                                            true: pel.isStatus,
+                                            false: !pel.isStatus,
+                                        }"
                                     >
-                                        Staff Test
+                                        {{ pel.status }}
                                     </span>
                                 </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                4
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 4
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 4
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                5
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 5
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 5
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                6
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 6
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 6
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                7
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 7
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 7
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                8
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 8
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 8
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                9
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 9
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 9
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                            </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <!-- number -->
-                                        <div
-                                            class="relative hidden w-8 h-8 mr-3 md:block"
-                                        >
-                                            <p
-                                                class="font-semibold w-full h-full text-center"
-                                            >
-                                                10
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- nama -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Applestore Tester 10
-                                </td>
-                                <!-- npp -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    applestore 10
-                                </td>
-                                <!-- unit kerja -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Bagian Test
-                                </td>
-                                <!-- jabatan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-red-500"
-                                    >
-                                        Staff Test
-                                    </span>
-                                </td>
-                                <!-- penugasan saat ini -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Kantor Test
-                                </td>
-                                <!-- bidang -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- nama pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing nama pelatihan 1
-                                </td>
-                                <!-- waktu pelaksanaan pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-orange-500"
-                                    >
-                                        14/10/2020
-                                    </span>
-                                </td>
-                                <!-- biaya pelatihan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-blue-500"
-                                    >
-                                        5,000,001
-                                    </span>
-                                </td>
-                                <!-- status pelaksanaan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 text-center"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6 px-1 py-1 ml-2 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <line
-                                            x1="18"
-                                            y1="6"
-                                            x2="6"
-                                            y2="18"
-                                        ></line>
-                                        <line
-                                            x1="6"
-                                            y1="6"
-                                            x2="18"
-                                            y2="18"
-                                        ></line>
-                                    </svg>
-                                </td>
-                                <!-- total score -->
-                                <td class="px-4 py-3 text-sm text-center"></td>
-                                <!-- keterangan -->
-                                <td class="px-4 py-3 text-sm text-center">
-                                    <span
-                                        class="px-2 py-1 font-semibold text-purple-500"
-                                    >
-                                        PT Trainer Indonesia 2
-                                    </span>
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    Testing Nama Pelatihan 1
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center">
-                                    5,000,001
-                                </td>
-
-                                <td class="px-4 py-3 text-sm text-center"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1947,3 +464,315 @@
         </div>
     </main>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            dataclass: "px-4 py-3 text-sm text-center",
+            pelatihan: [
+                {
+                    no: "1",
+                    nama: "Applestore Tester",
+                    npp: "applestore",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 1",
+                    waktu: "1 Jan 2020",
+                    biaya: "5,000,000",
+                    isAtasan: true,
+                    isSdm: true,
+                    vendor: "PT Trainer Indonesia 1",
+                    lokasi: "Testing Lokasi 1",
+                    biayaFinal: "5,000,000",
+                    status: "Realisasi",
+                    isStatus: true,
+                },
+                {
+                    no: "2",
+                    nama: "Applestore Tester 2",
+                    npp: "applestore2",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 2",
+                    waktu: "2 Jan 2020",
+                    biaya: "4,000,000",
+                    isAtasan: true,
+                    isSdm: true,
+                    vendor: "PT Trainer Indonesia 2",
+                    lokasi: "Testing Lokasi 2",
+                    biayaFinal: "5,000,000",
+                    status: "Rencana",
+                    isStatus: false,
+                },
+                {
+                    no: "3",
+                    nama: "Applestore Tester 3",
+                    npp: "applestore3",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 3",
+                    waktu: "3 Jan 2020",
+                    biaya: "8,000,000",
+                    isAtasan: false,
+                    isSdm: true,
+                    vendor: "PT Trainer Indonesia 3",
+                    lokasi: "Testing Lokasi 3",
+                    biayaFinal: "8,500,000",
+                    status: "Rencana",
+                    isStatus: false,
+                },
+                {
+                    no: "4",
+                    nama: "Applestore Tester 4",
+                    npp: "applestore4",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 4",
+                    waktu: "4 Jan 2020",
+                    biaya: "5,000,000",
+                    isAtasan: true,
+                    isSdm: true,
+                    vendor: "PT Trainer Indonesia 4",
+                    lokasi: "Testing Lokasi 4",
+                    biayaFinal: "7,000,000",
+                    status: "Realisasi",
+                    isStatus: true,
+                },
+                {
+                    no: "5",
+                    nama: "Applestore Tester 5",
+                    npp: "applestore5",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 5",
+                    waktu: "5 Jan 2020",
+                    biaya: "1,000,000",
+                    isAtasan: true,
+                    isSdm: true,
+                    vendor: "PT Trainer Indonesia 5",
+                    lokasi: "Testing Lokasi 5",
+                    biayaFinal: "3,000,000",
+                    status: "Rencana",
+                    isStatus: false,
+                },
+                {
+                    no: "6",
+                    nama: "Applestore Tester 6",
+                    npp: "applestore6",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 6",
+                    waktu: "6 Jan 2020",
+                    biaya: "12,000,000",
+                    isAtasan: false,
+                    isSdm: false,
+                    vendor: "PT Trainer Indonesia 6",
+                    lokasi: "Testing Lokasi 6",
+                    biayaFinal: "10,000,000",
+                    status: "Rencana",
+                    isStatus: false,
+                },
+                {
+                    no: "7",
+                    nama: "Applestore Tester 7",
+                    npp: "applestore7",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 7",
+                    waktu: "7 Jan 2020",
+                    biaya: "5,000,000",
+                    isAtasan: true,
+                    isSdm: true,
+                    vendor: "PT Trainer Indonesia 7",
+                    lokasi: "Testing Lokasi 7",
+                    biayaFinal: "5,000,000",
+                    status: "Realisasi",
+                    isStatus: true,
+                },
+                {
+                    no: "8",
+                    nama: "Applestore Tester 8",
+                    npp: "applestore8",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 8",
+                    waktu: "8 Jan 2020",
+                    biaya: "35,000,000",
+                    isAtasan: true,
+                    isSdm: true,
+                    vendor: "PT Trainer Indonesia 8",
+                    lokasi: "Testing Lokasi 8",
+                    biayaFinal: "45,000,000",
+                    status: "Realisasi",
+                    isStatus: true,
+                },
+                {
+                    no: "9",
+                    nama: "Applestore Tester 9",
+                    npp: "applestore9",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 9",
+                    waktu: "9 Jan 2020",
+                    biaya: "7,000,000",
+                    isAtasan: true,
+                    isSdm: true,
+                    vendor: "PT Trainer Indonesia 9",
+                    lokasi: "Testing Lokasi 9",
+                    biayaFinal: "5,830,000",
+                    status: "Realisasi",
+                    isStatus: true,
+                },
+                {
+                    no: "10",
+                    nama: "Applestore Tester 10",
+                    npp: "applestore10",
+                    unit: "Bagian Test",
+                    jabatan: "Staff Test",
+                    penugasan: "Kantor Test",
+                    bidang: "Tester",
+                    namapelatihan: "Testing Nama Pelatihan 10",
+                    waktu: "10 Jan 2020",
+                    biaya: "55,000,000",
+                    isAtasan: true,
+                    isSdm: false,
+                    vendor: "PT Trainer Indonesia 10",
+                    lokasi: "Testing Lokasi 10",
+                    biayaFinal: "40,000,000",
+                    status: "Realisasi",
+                    isStatus: true,
+                },
+            ],
+        }
+    },
+}
+</script>
+
+<style scoped>
+.true {
+    @apply px-2;
+    @apply py-1;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply text-green-700;
+    @apply bg-green-100;
+    @apply rounded-full;
+}
+
+.false {
+    @apply px-2;
+    @apply py-1;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply text-blue-700;
+    @apply bg-blue-100;
+    @apply rounded-full;
+}
+
+.atasanya {
+    @apply h-6;
+    @apply w-6;
+    @apply px-1;
+    @apply py-1;
+    @apply ml-2;
+    @apply stroke-2;
+    @apply stroke-current;
+    @apply text-green-700;
+    @apply bg-green-100;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply rounded-full;
+    @apply text-center;
+}
+
+.atasantolak {
+    @apply h-6;
+    @apply w-6;
+    @apply px-1;
+    @apply py-1;
+    @apply ml-2;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply rounded-full;
+    @apply text-center;
+}
+
+.atasantidak {
+    @apply h-6;
+    @apply w-6;
+    @apply px-1;
+    @apply py-1;
+    @apply ml-2;
+    @apply stroke-2;
+    @apply stroke-current;
+    @apply text-red-700;
+    @apply bg-red-100;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply rounded-full;
+    @apply text-center;
+}
+
+.sdmya {
+    @apply h-6;
+    @apply w-6;
+    @apply px-1;
+    @apply py-1;
+    @apply ml-2;
+    @apply stroke-2;
+    @apply stroke-current;
+    @apply text-green-700;
+    @apply bg-green-100;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply rounded-full;
+    @apply text-center;
+}
+
+.sdmtolak {
+    @apply h-6;
+    @apply w-6;
+    @apply px-1;
+    @apply py-1;
+    @apply ml-2;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply rounded-full;
+    @apply text-center;
+}
+
+.sdmtidak {
+    @apply h-6;
+    @apply w-6;
+    @apply px-1;
+    @apply py-1;
+    @apply ml-2;
+    @apply stroke-2;
+    @apply stroke-current;
+    @apply text-red-700;
+    @apply bg-red-100;
+    @apply font-semibold;
+    @apply leading-tight;
+    @apply rounded-full;
+    @apply text-center;
+}
+</style>
