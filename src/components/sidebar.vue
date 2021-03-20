@@ -42,8 +42,6 @@
                         <span class="ml-4">Dashboard</span>
                     </router-link>
                 </li>
-            </ul>
-            <ul>
                 <li class="relative px-6 py-3">
                     <router-link
                         to="/vendor"
@@ -141,14 +139,12 @@
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5"
+                            class="w-5 h-5 stroke-2 stroke-current"
                             aria-hidden="true"
                             fill="none"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="2"
                             viewBox="0 0 24 24"
-                            stroke="currentColor"
                         >
                             <rect
                                 x="2"
@@ -165,6 +161,52 @@
                     </router-link>
                 </li>
             </ul>
+            <div class="border-b-2 border-red-500 mx-4 mt-2 rounded-md"></div>
+            <ul class="mt-6">
+                <li class="relative px-6 py-3">
+                    <button
+                        @click="toggle"
+                        class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 focus:outline-none p-1 focus:ring-2 focus:ring-red-500"
+                    >
+                        <span class="inline-flex items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5 stroke-2 stroke-current"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                            <span class="ml-4">Pages</span>
+                        </span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 stroke-2 stroke-current"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div v-if="active" class="">
+                        <div class="bg-gray-200 mt-2 rounded-md py-2">
+                            <router-link
+                                to="/login"
+                                class="inline-flex items-center text-sm ml-4 font-semibold transition-colors duration-150 hover:text-gray-800"
+                            >
+                                <span class="px-2">Login</span>
+                            </router-link>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </aside>
 </template>
@@ -174,7 +216,13 @@ export default {
     data() {
         return {
             isShowing: true,
+            active: false,
         }
+    },
+    methods: {
+        toggle() {
+            this.active = !this.active
+        },
     },
 }
 </script>
