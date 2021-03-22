@@ -3,9 +3,7 @@
         <div
             class="container px-6 mx-auto grid animate__animated animate__fadeInUpBig animate__slow"
         >
-            <h2
-                class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200 uppercase"
-            >
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 uppercase">
                 Data Training
             </h2>
 
@@ -14,7 +12,7 @@
                 <div class="flex mb-4 md:mb-0">
                     <router-link
                         to="/add-training"
-                        class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red dark:bg-red-600"
+                        class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
                     >
                         Input Training
                     </router-link>
@@ -28,14 +26,14 @@
                     />
                     <input
                         type="date"
-                        class="w-24 md:w-44 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg active:bg-red-600 focus:outline-none focus:shadow-outline-red"
+                        class="w-24 md:w-44 px-4 py-3 bg-white shadow-md text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg active:bg-red-600 focus:outline-none focus:shadow-outline-red"
                     />
                     <input
                         type="date"
-                        class="w-24 md:w-44 px-4 py-3 bg-white shadow-md dark:bg-white text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg active:bg-red-600 focus:outline-none focus:shadow-outline-red"
+                        class="w-24 md:w-44 px-4 py-3 bg-white shadow-md text-sm font-medium leading-5 transition-colors duration-150 border border-transparent rounded-lg active:bg-red-600 focus:outline-none focus:shadow-outline-red"
                     />
                     <button
-                        class="px-3 py-3 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red dark:bg-red-600"
+                        class="px-3 py-3 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +58,7 @@
                     <table class="w-full whitespace-no-wrap">
                         <thead>
                             <tr
-                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50"
                             >
                                 <th class="px-4 py-3 text-center">#</th>
                                 <th class="px-4 py-3 text-center">Tanggal</th>
@@ -78,13 +76,11 @@
                                 <th class="px-4 py-3 text-center">Aksi</th>
                             </tr>
                         </thead>
-                        <tbody
-                            class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
-                        >
+                        <tbody class="bg-white divide-y">
                             <tr
                                 v-for="training in trainings"
                                 :key="training.no"
-                                class="text-gray-700 dark:text-gray-400"
+                                class="text-gray-700"
                             >
                                 <td :class="dataclass">
                                     <span class="font-semibold">
@@ -149,7 +145,7 @@
                     </table>
                 </div>
                 <div
-                    class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+                    class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t bg-gray-50 sm:grid-cols-9"
                 >
                     <span class="flex items-center col-span-3">
                         Showing 0-10 of 100
