@@ -1,21 +1,15 @@
 <template>
     <main class="h-full overflow-y-auto">
         <div class="container px-6 mx-auto grid">
-            <h2
-                class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200 uppercase"
-            >
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 uppercase">
                 Input Training
             </h2>
 
             <!-- form -->
-            <div
-                class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
-            >
+            <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md">
                 <!-- pilih vendor -->
                 <label class="block mt-4 text-sm">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
-                    >
+                    <span class="text-gray-700 text-base font-medium">
                         Pilih <span class="text-red-600">Vendor</span>
                     </span>
                     <select
@@ -29,8 +23,7 @@
 
                 <!-- nama pelatihan -->
                 <label class="block text-sm mt-5">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
+                    <span class="text-gray-700 text-base font-medium"
                         >Nama <span class="text-red-600">Pelatihan</span></span
                     >
                     <input
@@ -40,8 +33,7 @@
 
                 <!-- tgl pelaksanaan -->
                 <label class="block text-sm mt-5">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
+                    <span class="text-gray-700 text-base font-medium"
                         >Tgl <span class="text-red-600">Pelaksanaan</span></span
                     >
                     <div class="block space-x-4">
@@ -58,8 +50,7 @@
 
                 <!-- lokasi pelaksanaan -->
                 <label class="block text-sm mt-5">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
+                    <span class="text-gray-700 text-base font-medium"
                         >Lokasi
                         <span class="text-red-600">Pelaksanaan</span></span
                     >
@@ -70,8 +61,7 @@
 
                 <!-- masa berlaku sertifikat -->
                 <label class="block text-sm mt-5">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
+                    <span class="text-gray-700 text-base font-medium"
                         >Masa
                         <span class="text-red-600">Berlaku</span>
                         Sertifikat</span
@@ -83,8 +73,7 @@
 
                 <!-- biaya pelatihan -->
                 <label class="block text-sm mt-5">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
+                    <span class="text-gray-700 text-base font-medium"
                         >Biaya
                         <span class="text-red-600">Pelaksanaan</span></span
                     >
@@ -95,9 +84,7 @@
 
                 <!-- gap kompetensi -->
                 <label class="block mt-4 text-sm">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
-                    >
+                    <span class="text-gray-700 text-base font-medium">
                         Gap <span class="text-red-600">Kompetensi</span>
                     </span>
                     <select
@@ -110,9 +97,7 @@
 
                 <!-- kategori hard skill -->
                 <label class="block mt-4 text-sm">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
-                    >
+                    <span class="text-gray-700 text-base font-medium">
                         Kategori <span class="text-red-600">Hard</span> Skill
                     </span>
                     <select
@@ -125,9 +110,7 @@
 
                 <!-- kategori technical skill -->
                 <label class="block mt-4 text-sm">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
-                    >
+                    <span class="text-gray-700 text-base font-medium">
                         Kategori
                         <span class="text-red-600">Technical</span> Skill
                     </span>
@@ -141,9 +124,7 @@
 
                 <!-- jenis pengembangan -->
                 <label class="block mt-4 text-sm">
-                    <span
-                        class="text-gray-700 dark:text-gray-400 text-base font-medium"
-                    >
+                    <span class="text-gray-700 text-base font-medium">
                         Jenis <span class="text-red-600">Pengembangan</span>
                     </span>
                     <select
