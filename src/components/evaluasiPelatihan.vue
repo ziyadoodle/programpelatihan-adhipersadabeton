@@ -3,9 +3,7 @@
         <div
             class="container px-6 mx-auto grid animate__animated animate__fadeInUpBig animate__slow"
         >
-            <h2
-                class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200 uppercase"
-            >
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 uppercase">
                 DASHBOARD EVALUASI PELATIHAN | SDM
             </h2>
 
@@ -15,7 +13,7 @@
                     <table class="w-full whitespace-no-wrap table-auto">
                         <thead>
                             <tr
-                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50"
                             >
                                 <th class="px-4 py-3 text-center" rowspan="3">
                                     #
@@ -85,7 +83,7 @@
                                 </th>
                             </tr>
                             <tr
-                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50"
                             >
                                 <th
                                     class="px-4 py-3 text-center border text-indigo-500"
@@ -113,7 +111,7 @@
                                 </th>
                             </tr>
                             <tr
-                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50"
                             >
                                 <th class="px-4 py-3 text-center border">
                                     Instruktur menguasai materi pelatihan
@@ -171,19 +169,8 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody
-                            class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
-                        >
-                            <!-- <tr class="text-gray-700 dark:text-gray-400">
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <div class="relative hidden w-8 h-8 mr-3 md:block">
-                          <p class="font-semibold w-full h-full text-center">1</p>
-                        </div>
-                      </div>
-                    </td>
-                  </tr> -->
-                            <tr class="text-gray-700 dark:text-gray-400">
+                        <tbody class="bg-white divide-y">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     1
                                 </td>
@@ -302,7 +289,7 @@
                                 </td>
                             </tr>
 
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     2
                                 </td>
@@ -420,7 +407,7 @@
                                     adipisicing.
                                 </td>
                             </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     3
                                 </td>
@@ -538,7 +525,7 @@
                                     adipisicing.
                                 </td>
                             </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     4
                                 </td>
@@ -656,7 +643,7 @@
                                     adipisicing.
                                 </td>
                             </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     5
                                 </td>
@@ -774,7 +761,7 @@
                                     adipisicing.
                                 </td>
                             </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     6
                                 </td>
@@ -892,7 +879,7 @@
                                     adipisicing.
                                 </td>
                             </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     7
                                 </td>
@@ -1010,7 +997,7 @@
                                     adipisicing.
                                 </td>
                             </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     8
                                 </td>
@@ -1128,7 +1115,7 @@
                                     adipisicing.
                                 </td>
                             </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     9
                                 </td>
@@ -1246,7 +1233,7 @@
                                     adipisicing.
                                 </td>
                             </tr>
-                            <tr class="text-gray-700 dark:text-gray-400">
+                            <tr class="text-gray-700">
                                 <td class="px-4 py-5 text-center">
                                     10
                                 </td>
@@ -1368,7 +1355,7 @@
                     </table>
                 </div>
                 <div
-                    class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+                    class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t bg-gray-50 sm:grid-cols-9"
                 >
                     <span class="flex items-center col-span-3">
                         Showing 1-10 of 100
