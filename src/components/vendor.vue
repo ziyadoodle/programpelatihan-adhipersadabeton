@@ -3,9 +3,7 @@
         <div
             class="container px-6 mx-auto grid animate__animated animate__fadeInUpBig animate__slow"
         >
-            <h2
-                class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200 uppercase"
-            >
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 uppercase">
                 Data Vendor
             </h2>
 
@@ -65,7 +63,7 @@
                     <table class="w-full whitespace-no-wrap">
                         <thead>
                             <tr
-                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50"
                             >
                                 <th class="px-4 py-3 text-center">#</th>
                                 <th class="px-4 py-3 text-center">
@@ -83,13 +81,11 @@
                                 <th class="px-4 py-3 text-center">Aksi</th>
                             </tr>
                         </thead>
-                        <tbody
-                            class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
-                        >
+                        <tbody class="bg-white divide-y">
                             <tr
                                 v-for="vendor in vendors"
                                 :key="vendor.no"
-                                class="text-gray-700 dark:text-gray-400"
+                                class="text-gray-700"
                             >
                                 <td :class="dataclass">
                                     <span class="font-semibold">
@@ -171,7 +167,7 @@
                     </table>
                 </div>
                 <div
-                    class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+                    class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t bg-gray-50 sm:grid-cols-9"
                 >
                     <span class="flex items-center col-span-3">
                         Showing 0-10 of 100
